@@ -1,0 +1,285 @@
+<!DOCTYPE html>Add commentMore actions
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lensart_la</title>
+    <link rel="stylesheet" href="../statics/css/Index.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="Header-content">
+            <div class="Logo">
+                <img src="../statics/img/Aviatur.png">
+            </div>
+            <div class="Barra-menu">
+                <nav>
+                    <ul>
+                        <!--<li><a href="Index.html">INICIO</a></li>
+                        <div onpointerout="blurMenu()" onpointerover="toggleMenu()" class="Content">
+                            <li>
+                                <a href="#">PORTAFOLIO</a>
+                            </li>
+                            <div class="Sub-menu-wrap" id="SubMenu">
+                                <div class="Sub-menu">
+                                    <a href="#" class="Sub-menu-link">
+                                        <p>PRODUCTO</p>
+                                    </a>
+                                    <a href="#" class="Sub-menu-link">
+                                        <p>RETRATO</p>
+                                    </a>
+                                    <a href="#" class="Sub-menu-link">
+                                        <p>URBANO</p>
+                                    </a>
+                                    <a href="#" class="Sub-menu-link">
+                                        <p>EVENTO</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="#">¿QUIENES SOMOS?</a></li>
+                        <a id="Content-button" href="https://api.whatsapp.com/send/?phone=%2B573107415917&text&type=phone_number&app_absent=0"><button>CONTACTO</button></a>-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="Info">
+            <div class="Muestra">
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Solicitud.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Mis Solicitudes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Monitoreo_Eventos.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Monitoreo Eventos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Reportes.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Reportes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/KPIS.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>KPI'S</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Repositorio_Pasajeros.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Repositorio Pasajeros</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Facturas.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Facturas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Reporte_Cartera.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Reporte Cartera</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="Opciones1"></div>
+                    <div class="Opciones2">
+                        <div class="icono">
+                            <img src="../statics/img/Consulta_Actas.png" alt="icono" />
+                        </div>
+                        <div class="Subtitle">
+                            <p>Consulta Actas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="Calendario">
+                    <div class="calendar-header">
+                        <div class="Text-calendar">
+                            <p>Calendario Eventos</p>
+                        </div>
+                        <div class="calendar-months">
+                            <button id="prev-month">&#x276E;</button>
+                            <span id="month-year"></span>
+                            <button id="next-month">&#x276F;</button>
+                        </div>
+                    </div>
+                    <div class="calendar-container">
+                        <div class="calendar-days">
+                            <div>Do</div><div>Lu</div><div>Ma</div><div>Mi</div><div>Ju</div><div>Vi</div><div>Sa</div>
+                        </div>
+                        <div class="calendar-dates" id="calendar-dates">
+                            <!-- Días generados por JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="eventos-box">
+                    <h2>Próximas actividades y eventos</h2>
+                    <div class="eventos-lista">
+                      
+                      <div class="evento">
+                        <div class="evento-fecha">
+                          <span class="dia">14</span>
+                          <span class="dia-texto">Mié</span>
+                        </div>
+                        <div class="evento-detalles">
+                          <p class="evento-titulo">Seminario médico latinoamericano</p>
+                          <p class="evento-hora">8:00 am - 5:30pm</p>
+                        </div>
+                      </div>
+                  
+                      <div class="evento">
+                        <div class="evento-fecha">
+                          <span class="dia">15</span>
+                          <span class="dia-texto">Jue</span>
+                        </div>
+                        <div class="evento-detalles">
+                          <p class="evento-titulo">Seminario médico latinoamericano</p>
+                          <p class="evento-hora">8:00 am - 5:30pm</p>
+                        </div>
+                      </div>
+                  
+                      <div class="evento">
+                        <div class="evento-fecha">
+                          <span class="dia">16</span>
+                          <span class="dia-texto">Vie</span>
+                        </div>
+                        <div class="evento-detalles">
+                          <p class="evento-titulo">Seminario médico latinoamericano</p>
+                          <p class="evento-hora">8:00 am - 5:30pm</p>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>                  
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let SubMenu = document.getElementById("SubMenu");
+
+    function blurMenu() {
+        SubMenu.classList.remove("open-menu");
+    }
+
+    function toggleMenu(){
+        SubMenu.classList.toggle("open-menu");
+    }
+
+    /* CALENDARIO */
+
+    const monthYear = document.getElementById("month-year");
+    const datesContainer = document.getElementById("calendar-dates");
+    const prevBtn = document.getElementById("prev-month");
+    const nextBtn = document.getElementById("next-month");
+
+    let today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+
+    const monthNames = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
+
+    function renderCalendar(month, year) {
+        datesContainer.innerHTML = "";
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+
+        monthYear.innerHTML = `${monthNames[month]} ${year}`;
+
+        for (let i = 0; i < firstDay; i++) {
+            datesContainer.innerHTML += "<div></div>";
+        }
+
+        for (let day = 1; day <= lastDate; day++) {
+            const date = new Date(year, month, day);
+            const div = document.createElement("div");
+            div.textContent = day;
+
+            if (
+                day === today.getDate() &&
+                month === today.getMonth() &&
+                year === today.getFullYear()
+            ) {
+                div.classList.add("today");
+            }
+
+            if (date.getDay() === 0) {
+                div.classList.add("domingo"); // Marcar domingos
+            }
+
+            datesContainer.appendChild(div);
+        }
+    }
+
+    prevBtn.onclick = () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+    };
+
+    nextBtn.onclick = () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+    };
+
+    renderCalendar(currentMonth, currentYear);
+
+</script>
+</html>
