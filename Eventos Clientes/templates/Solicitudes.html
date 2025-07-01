@@ -1,0 +1,138 @@
+<!DOCTYPE html>Add commentMore actions
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lensart_la</title>
+    <link rel="stylesheet" href="../statics/css/Solicitudes.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="Header-content">
+            <div class="Logo">
+                <a href="../templates/Index.html" class="card-link">
+                    <img src="../statics/img/Aviatur.png">
+                </a>
+            </div>
+            <div class="Barra-menu">
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="Info">
+            <div class="solicitudes-container">
+                <div class="solicitudes-header">
+                    <h2>Mis solicitudes</h2>
+                    <div class="solicitudes-buscador">
+                        <p>Buscar</p>
+                        <input type="text" placeholder="Buscar..." class="input-busqueda" />
+                    </div>
+                    <div class="solicitudes-estados">
+                        <p>Estado</p>
+                        <select class="estado-select">
+                            <option>Todos</option>
+                            <option>Solicitado</option>
+                            <option>Pendiente</option>
+                            <option>Operación</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn-crear">
+                        <span>+</span> Crear solicitud
+                    </button>
+                </div>
+              
+                <div class="solicitudes-listado">
+                    <!-- Aquí van las tarjetas -->
+                    <div class="card-solicitud estado-solicitado">
+                        <h4>Bonos día del padre</h4>
+                        <span class="estado">Solicitado</span>
+                        <p>03/06/2025</p>
+                        <p>Medellín, Antioquía</p>
+                        <p><strong>900514524</strong></p>
+                        <p>ABBVIE S.A.S</p>
+                    </div>
+                    
+                    <div class="card-solicitud estado-pendiente">
+                        <h4>Bonos día del padre</h4>
+                        <span class="estado">Pendiente</span>
+                        <p>03/06/2025</p>
+                        <p>Medellín, Antioquía</p>
+                        <p><strong>900514524</strong></p>
+                        <p>ABBVIE S.A.S</p>
+                    </div>
+                    
+                    <div class="card-solicitud estado-operacion">
+                        <h4>GSK - CICLO GEN MED</h4>
+                        <span class="estado">Operación</span>
+                        <p>08/06/2025</p>
+                        <p>Cartagena, Bolívar</p>
+                        <p><strong>830012969</strong></p>
+                        <p>GLAXOSMITHKLINE COLOMBIA S.A.</p>
+                    </div>
+
+                    <div class="card-solicitud estado-solicitado">
+                        <h4>Bonos día del padre</h4>
+                        <span class="estado">Solicitado</span>
+                        <p>03/06/2025</p>
+                        <p>Medellín, Antioquía</p>
+                        <p><strong>900514524</strong></p>
+                        <p>ABBVIE S.A.S</p>
+                    </div>
+              
+                    <!-- Repite más tarjetas según los datos -->
+                </div>
+              
+                <div class="solicitudes-footer">
+                    <p>Total registros <strong>4</strong></p>
+                    <div class="paginacion">
+                        <button>‹</button>
+                        <span>1</span>
+                        <button>›</button>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+    </section>
+</body>
+<script>
+    let SubMenu = document.getElementById("SubMenu");
+
+    function blurMenu() {
+        SubMenu.classList.remove("open-menu");
+    }
+
+    function toggleMenu(){
+        SubMenu.classList.toggle("open-menu");
+    }
+
+    /* CREAR TARJETAS DE MANERA DINÁMICA */
+
+    const estadoClase = {
+        'solicitado': 'estado-solicitado',
+        'pendiente': 'estado-pendiente',
+        'operación': 'estado-operacion',
+        'operacion': 'estado-operacion'
+    };
+    
+    function crearTarjeta(solicitud) {
+        const tarjeta = document.createElement('div');
+        tarjeta.classList.add('card-solicitud');
+    
+        const clase = estadoClase[solicitud.estado.toLowerCase()];
+        if (clase) tarjeta.classList.add(clase);
+    
+        tarjeta.innerHTML = `
+            <h4>${solicitud.titulo}</h4>
+            <span class="estado">${solicitud.estado}</span>
+            <p>${solicitud.fecha}<br>${solicitud.ciudad}</p>
+            <p><strong>${solicitud.id}</strong><br>${solicitud.empresa}</p>
+        `;
+    
+        document.querySelector('.solicitudes-listado').appendChild(tarjeta);
+    }    
+
+</script>
+</html>

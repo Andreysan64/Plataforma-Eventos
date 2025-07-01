@@ -7,11 +7,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-li, a{
-    color: black;
-    text-decoration: none;
-}
-
 body{
     background: #FFFFFF;
 }
@@ -23,7 +18,7 @@ Header{
     align-items: center;
     position: fixed;
     width: 100%;
-    background: linear-gradient(269.69deg, #070A2A -3.36%, #5DADE3 27.57%, #2C55BD 99.73%);
+    background: linear-gradient(270deg, #070A2A -3.36%, #2C55BD 99.73%);
     box-shadow: 0 4px 25px -15px black;
     z-index: 10;
     top: 0;
@@ -144,6 +139,11 @@ button:hover{
     width: 50%;
 }
 
+.card-link{
+    width: 175px;
+    height: 175px;
+}
+
 .card-container {
     position: relative;
     width: 164px;
@@ -235,6 +235,7 @@ button:hover{
     border-radius: 15px 15px 0px 0px;
     border: 2px solid rgba(0, 92, 185, 0.30);
     background: #F4F7FA;
+    margin: auto;
 }
 
 .calendar-months {
@@ -279,7 +280,10 @@ button:hover{
 
   
 .today {
-    background: #6CB5FF;
+    background: radial-gradient(57.37% 57.37% at 50% 50%, rgba(93, 205, 224, 0.80) 0%, rgba(93, 205, 224, 0.00) 100%);
+    border: 1px;
+    border-color: #5DCDE0;
+
     color: white;
 }
 
@@ -396,4 +400,76 @@ body::-webkit-scrollbar-thumb{
     background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     border-right: 3px white solid;
+}
+
+/* Para pantallas grandes (≥1200px) */
+
+@media screen and (min-width: 1200px) {
+    .Muestra {
+        grid-template-columns: repeat(3, 1fr);
+        width: 60%;
+    }
+
+    .calendar-container,
+    .eventos-box {
+        width: 400px;
+    }
+}
+
+/* Para pantallas medianas (≥768px y <1200px) */
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .Muestra {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 30px;
+    }
+  
+    .calendar-container,
+    .calendar-header,
+    .eventos-box {
+        width: 90%;
+    }
+  
+    .calendar-months {
+        font-size: 24px;
+    }
+}
+
+/* Para pantallas pequeñas (<768px) */
+
+@media screen and (max-width: 767px) {
+    .Info {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+  
+    .Muestra {
+        width: 100%;
+        gap: 50px;
+        padding: 50px;
+    }
+  
+    .calendar-container,
+    .eventos-box,
+    .calendar-header,
+    .calendar-months {
+        width: 100%;
+    }
+  
+    .calendar-months {
+        font-size: 20px;
+    }
+  
+    .calendar-days,
+    .calendar-dates {
+        font-size: 16px;
+        gap: 6px;
+    }
+  
+    .calendar-dates div {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+    }
 }
